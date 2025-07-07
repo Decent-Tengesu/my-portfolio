@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | TechTengesu</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">TechTengesu</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="blog-grid" data-aos="fade-up">
+    <h1 class="page-title">My Projects</h1>
+    <div class="card-container">
+      
+      <div class="blog-card">
+        <img src="images/project1.png" alt="Project 1" />
+        <h2>Sekani School Mobile</h2>
+        <p>A .NET MAUI app for managing school operations, QR scanning, logins, and geolocation 2FA.</p>
+        <a href="project1.html" class="read-more">View Project →</a>
+      </div>
+
+      <div class="blog-card">
+        <img src="images/project2.png" alt="Project 2" />
+        <h2>Portfolio Website</h2>
+        <p>This very website! Built using HTML, CSS, JS, and deployed on Netlify. Scalable and dynamic.</p>
+        <a href="project2.html" class="read-more">View Project →</a>
+      </div>
+
+      <div class="blog-card">
+        <img src="images/project3.png" alt="Project 3" />
+        <h2>Glide School App</h2>
+        <p>A no-code school dashboard I built with Glide. Used for testing, chat, and invitation code validation.</p>
+        <a href="project3.html" class="read-more">View Project →</a>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>&copy; <span id="year"></span> Decent Tengesu | Built with 💻 by TechTengesu</p>
+      <div class="social-links">
+        <a href="https://wa.me/263789973649" target="_blank">WhatsApp</a>
+        <a href="mailto:decenttengesu01@gmail.com">Email</a>
+        <a href="https://github.com/Decent-Tengesu" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/Decent-Tengesu" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

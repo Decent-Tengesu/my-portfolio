@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | TechTengesu</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">TechTengesu</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="blog-grid" data-aos="fade-up">
+    <h1 class="page-title">Latest Blog Posts</h1>
+    <div class="card-container">
+      
+      <div class="blog-card">
+        <img src="images/blog1.jpg" alt="Cybersecurity" />
+        <h2>The Future of Cybersecurity</h2>
+        <p>AI is changing the security game. Here's how I'm preparing as a tech developer in this new age.</p>
+        <a href="blog-post.html" class="read-more">Read More →</a>
+      </div>
+
+      <div class="blog-card">
+        <img src="images/blog2.jpg" alt="Coding Journey" />
+        <h2>How I Started Coding</h2>
+        <p>I started with zero experience and now build and deploy real apps. Here's my full journey.</p>
+        <a href="blog-post2.html" class="read-more">Read More →</a>
+      </div>
+
+      <div class="blog-card">
+        <img src="images/blog3.jpg" alt="Tools I Use" />
+        <h2>Top Tools I Use Daily</h2>
+        <p>From VS Code to Netlify, here are the tools I use to work smarter as a developer.</p>
+        <a href="blog-post3.html" class="read-more">Read More →</a>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>&copy; <span id="year"></span> Decent Tengesu | Built with 💻 by TechTengesu</p>
+      <div class="social-links">
+        <a href="https://wa.me/263789973649" target="_blank">WhatsApp</a>
+        <a href="mailto:decenttengesu01@gmail.com">Email</a>
+        <a href="https://github.com/Decent-Tengesu" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/Decent-Tengesu" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

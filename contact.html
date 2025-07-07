@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - TechTengesu</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">TechTengesu</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main data-aos="fade-up">
+    <h1>Contact Me</h1>
+    <form id="contact-form">
+      <input type="text" name="from_name" placeholder="Your Name" required><br>
+      <input type="email" name="reply_to" placeholder="Your Email" required><br>
+      <textarea name="message" placeholder="Your Message" required></textarea><br>
+      <button type="submit">Send</button>
+    </form>
+    <p><a href="https://wa.me/263789973649" target="_blank">Message me on WhatsApp</a></p>
+  </main>
+
+  <!-- 🔝 Scroll to Top Button -->
+  <button onclick="scrollToTop()" id="scrollBtn" title="Go to top">↑</button>
+
+  <script>
+    window.onscroll = function () {
+      document.getElementById("scrollBtn").style.display =
+        window.scrollY > 200 ? "block" : "none";
+    };
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("1nryRpZiBXkj5jaPC");
+    })();
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      emailjs.sendForm('Decent', 'template_kf94z1c', this)
+        .then(function() {
+          alert('Message sent successfully!');
+          document.getElementById('contact-form').reset();
+        }, function(error) {
+          alert('Failed to send message. Try again.');
+          console.error(error);
+        });
+    });
+  </script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>&copy; <span id="year"></span> Decent Tengesu | Built with 💻 by TechTengesu</p>
+      <div class="social-links">
+        <a href="https://wa.me/263789973649" target="_blank">WhatsApp</a>
+        <a href="mailto:decenttengesu01@gmail.com">Email</a>
+        <a href="https://github.com/Decent-Tengesu" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/Decent-Tengesu" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
