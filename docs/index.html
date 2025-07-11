@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TechTengesu - Home</title>
+  <title>TechTengesu | Decent Tengesu Portfolio</title>
   <link rel="stylesheet" href="css/style.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
+
   <header>
     <nav class="navbar">
       <div class="logo">TechTengesu</div>
@@ -21,29 +22,95 @@
     </nav>
   </header>
 
-  <main data-aos="fade-up">
-    <h1>Welcome to TechTengesu</h1>
-    <p>I’m Decent Tengesu — a passionate Computer Science student on a mission to become a Tech Guru. Explore my projects, blog posts, and digital creations.</p>
-  </main>
+  <!-- Hero Section with Background Video -->
+  <section class="hero">
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="videos/hero-video.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+    <div class="hero-overlay">
+      <div class="hero-content" data-aos="fade-up">
+        <h1>Hi, I'm <span class="highlight">Decent Tengesu</span></h1>
+        <p>Aspiring Tech Guru | Full Stack Developer | Cybersecurity Learner</p>
+        <div class="hero-buttons">
+          <a href="projects.html" class="cta-button">🚀 View Projects</a>
+          <a href="contact.html" class="cta-button secondary">📬 Contact Me</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- 🔝 Scroll to Top Button -->
-  <button onclick="scrollToTop()" id="scrollBtn" title="Go to top">↑</button>
+  <!-- About Preview -->
+  <section class="about-preview" data-aos="fade-up">
+    <div class="container">
+      <img src="images/profile.png" alt="Decent Tengesu" class="profile-pic" />
+      <div>
+        <h2>About Me</h2>
+        <p>I’m a passionate Computer Science student building web and mobile apps that solve real-world problems. I'm currently learning everything from app development to cybersecurity — and sharing that journey here.</p>
+        <a href="about.html" class="read-more">Learn More →</a>
+      </div>
+    </div>
+  </section>
 
-  <script>
-    // Show button after scrolling 200px
-    window.onscroll = function () {
-      document.getElementById("scrollBtn").style.display =
-        window.scrollY > 200 ? "block" : "none";
-    };
+  <!-- Featured Projects -->
+  <section class="section" data-aos="fade-up">
+    <h2 class="section-title">🛠 Featured Projects</h2>
+    <div class="card-container">
+      <div class="blog-card">
+        <img src="images/project1.png" alt="Sekani App" />
+        <h3>Sekani School Mobile App</h3>
+        <p>A .NET MAUI app with QR login, role access, and 2FA. Built for real school operations.</p>
+        <a href="project1.html" class="read-more">View Project →</a>
+      </div>
+      <div class="blog-card">
+        <img src="images/project2.png" alt="Portfolio" />
+        <h3>This Portfolio Website</h3>
+        <p>My digital brand. Designed with HTML/CSS/JS and deployed on Netlify for fast delivery.</p>
+        <a href="project2.html" class="read-more">View Project →</a>
+      </div>
+      <div class="blog-card">
+        <img src="images/project3.png" alt="Glide App" />
+        <h3>Glide School Dashboard</h3>
+        <p>No-code admin tool for testing invitation codes, user roles, and quick comms.</p>
+        <a href="project3.html" class="read-more">View Project →</a>
+      </div>
+    </div>
+    <div class="center">
+      <a href="projects.html" class="cta-button">See All Projects →</a>
+    </div>
+  </section>
 
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  </script>
+  <!-- Blog Preview -->
+  <section class="section light-bg" data-aos="fade-up">
+    <h2 class="section-title">📰 Latest Blog Posts</h2>
+    <div class="card-container">
+      <div class="blog-card">
+        <img src="images/blog1.jpg" alt="Cybersecurity" />
+        <h3>The Future of Cybersecurity</h3>
+        <p>Cybersecurity is now a core part of my developer journey. Here’s why it matters.</p>
+        <a href="blog-post.html" class="read-more">Read More →</a>
+      </div>
+      <div class="blog-card">
+        <img src="images/blog2.jpg" alt="Tools" />
+        <h3>Top Tools I Use as a Dev</h3>
+        <p>From VS Code to GitHub Copilot, here are my essential tools for daily productivity.</p>
+        <a href="blog-post2.html" class="read-more">Read More →</a>
+      </div>
+    </div>
+    <div class="center">
+      <a href="blog.html" class="cta-button">See All Blogs →</a>
+    </div>
+  </section>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init();</script>
+  <!-- Contact CTA -->
+  <section class="contact-cta" data-aos="zoom-in">
+    <h2>Let’s build something amazing together</h2>
+    <p>I'm open to collaborations, freelance work, or just a chat. Reach out!</p>
+    <a href="https://wa.me/263789973649" class="cta-button">💬 WhatsApp Me</a>
+    <a href="mailto:decenttengesu01@gmail.com" class="cta-button secondary">📧 Send Email</a>
+  </section>
 
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="footer-content">
       <p>&copy; <span id="year"></span> Decent Tengesu | Built with 💻 by TechTengesu</p>
@@ -56,6 +123,8 @@
     </div>
   </footer>
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>

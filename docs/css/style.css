@@ -280,4 +280,74 @@
   .read-more:hover {
     background: #005edb;
   }
-  
+  /* Hero Section with Video Background */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  width: 100%;
+}
+
+.highlight {
+  color: #00ffc8;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.hero-buttons {
+  margin-top: 20px;
+}
+
+.cta-button {
+  padding: 12px 25px;
+  margin: 10px;
+  background: #0077ff;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.cta-button:hover {
+  background: #005edb;
+}
+
+.cta-button.secondary {
+  background: transparent;
+  border: 2px solid #fff;
+}
+
+.profile-pic {
+  max-width: 180px;
+  border-radius: 100px;
+  margin-right: 20px;
+}
